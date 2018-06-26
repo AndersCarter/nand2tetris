@@ -1,0 +1,314 @@
+ARITHMATIC LOGICAL COMMANDS
+
+add x+y
+@sp //is at least at 258 otherwise can't add
+A=M-1 //sets A to value of sp which is 257
+D=M //sets D to whatever is in 257
+A=A-1 //sets A to 257-1=256
+M=D+M //sets D to Value of 257 + value of 256
+@sp //goes back to sp
+M=M-1 //sets sp at 256
+
+sub x-y
+@sp //sp is atleast 258
+A=M-1 //sets A to 257
+D=M //sets D to the value in 256
+A=A-1 //sets A to 256
+D=M-D //sets D to the value of 257 + the value of 256
+M=D //sets 256 to the value of D
+@sp
+M=M-1 //sets sp back down one
+
+neg -y
+@sp //assume that sp is at least 257
+A=M-1 //sets A to 256
+M=!M //negates the value in 256
+M=M+1 //adds one to make -y
+
+eq true if x=y, else false
+@sp
+A=M-1
+D=M //y
+A=A-1
+D=M-D //x
+@sp
+M=M-1
+A=M-1
+@FALSE-x
+D;JNE
+M=-1
+@END-x
+0;JMP
+(FALSE-x)
+M=0
+(END-x)
+
+
+gt true if x>y, else false
+@sp
+A=M-1
+D=M //x
+A=A-1
+D=M-D //y
+@sp
+M=M-1
+A=M-1
+@FALSE-x
+D;JGT
+M=-1
+@END-x
+0;JMP
+(FALSE-x)
+M=0
+(END-x)
+
+
+lt true if x<y, else false
+@sp
+A=M-1
+D=M //x
+A=A-1
+D=M-D //y
+@sp
+M=M-1
+A=M-1
+@FALSE-x
+D;JLT
+M=-1
+@END-x
+0;JMP
+(FALSE-x)
+M=0
+(END-x)
+
+
+
+
+and x&y
+@sp //sp is at least 258
+A=M-1
+D=M
+A=A-1
+M=D&M
+@sp
+M=M-1
+
+or xory
+@sp //sp is at least 258
+A=M-1
+D=M
+A=A-1
+M=D|M
+@sp
+M=M-1
+
+not ~y
+@sp //sp is atleast 257
+A=M-1
+M=!M
+
+
+MEMORY ACCESS COMMANDS
+
+Push commands
+
+push argument x //stores the value x in arguemnt RAM
+@x
+D=A
+@ARG
+A=M+D
+D=M
+@sp
+A=M
+M=D
+@sp
+M=M+1
+
+push local x //stores the value x in local RAM
+@x
+D=A
+@LCL
+A=M+D
+D=M
+@sp
+A=M
+M=D
+@sp
+M=M+1
+
+push static sym
+@sym
+D=M
+@sp
+A=M
+M=D
+@sp
+M=M+1
+
+
+push constant x
+@x
+D=A
+@sp
+A=M
+M=D
+@sp
+M=M+1
+
+push this x
+@x
+D=A
+@THIS
+A=M+D
+D=M
+@sp
+A=M
+M=D
+@sp
+M=M+1
+
+push that x
+@x
+D=A
+@THAT
+A=M+D
+D=M
+@sp
+A=M
+M=D
+@sp
+M=M+1
+
+push pointer x 
+@(x+3)
+D=M
+@sp
+A=M
+M=D
+@sp
+M=M+1
+
+push temp x
+@(x+5)
+D=M
+@sp
+A=M
+M=D
+@sp
+M=M+1
+
+
+Pop commands
+
+
+pop arguement x
+@sp
+A=M-1
+D=M
+@13
+M=D
+@x
+D=A
+@arg
+D=M+D
+@14
+M=D
+@13
+D=M
+@14
+A=M
+M=D
+@sp
+M=M-1
+
+
+pop local x
+@sp
+A=M-1
+D=M
+@13
+M=D
+@x
+D=A
+@LCL
+D=M+D
+@14
+M=D
+@13
+D=M
+@14
+A=M
+M=D
+@sp
+M=M-1
+
+pop static sym
+@sp
+A=M-1
+D=M
+@(16+x)
+M=D
+@sp
+M=M-1
+
+pop constant x
+@sp
+M=M-1
+
+pop this x
+@sp
+A=M-1
+D=M
+@13
+M=D
+@x
+D=A
+@THIS
+D=M+D
+@14
+M=D
+@13
+D=M
+@14
+A=M
+M=D
+@sp
+M=M-1
+
+pop that x
+@sp
+A=M-1
+D=M
+@13
+M=D
+@x
+D=A
+@THAT
+D=M+D
+@14
+M=D
+@13
+D=M
+@14
+A=M
+M=D
+@sp
+M=M-1
+
+pop pointer x
+@sp
+A=M-1
+D=M
+@(x+3)
+M=D
+@sp
+M=M-1
+
+pop temp x
+@sp
+A=M-1
+D=M
+@(x+5)
+M=D
+@sp
+M=M-1

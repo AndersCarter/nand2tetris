@@ -1,0 +1,1252 @@
+function Main.main 4
+push constant 16
+call Player.setSize 1
+pop temp 0
+push constant 0
+call Movement.setGameState 1
+pop temp 0
+push constant 1
+push constant 2
+call Player.new 2
+pop local 0
+push local 0
+call Movement.setPlayer 1
+pop temp 0
+call Movement.new 0
+pop local 1
+push constant 16
+call Wall.setSize 1
+pop temp 0
+push constant 1000
+call Array.new 1
+pop local 3
+push constant 0
+push local 3
+add
+push constant 1
+push constant 1
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 1
+push local 3
+add
+push constant 1
+push constant 3
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 2
+push local 3
+add
+push constant 1
+push constant 5
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 3
+push local 3
+add
+push constant 1
+push constant 7
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 4
+push local 3
+add
+push constant 1
+push constant 11
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 4
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 5
+push local 3
+add
+push constant 1
+push constant 12
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 5
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 6
+push local 3
+add
+push constant 2
+push constant 1
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 6
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 7
+push local 3
+add
+push constant 2
+push constant 3
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 7
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 8
+push local 3
+add
+push constant 2
+push constant 5
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 8
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 9
+push local 3
+add
+push constant 2
+push constant 9
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 9
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 10
+push local 3
+add
+push constant 3
+push constant 1
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 10
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 11
+push local 3
+add
+push constant 3
+push constant 5
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 11
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 57
+push local 3
+add
+push constant 3
+push constant 7
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 57
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 12
+push local 3
+add
+push constant 3
+push constant 8
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 12
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 13
+push local 3
+add
+push constant 3
+push constant 9
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 13
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 14
+push local 3
+add
+push constant 3
+push constant 11
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 14
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 15
+push local 3
+add
+push constant 4
+push constant 3
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 15
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 16
+push local 3
+add
+push constant 4
+push constant 4
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 16
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 17
+push local 3
+add
+push constant 4
+push constant 5
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 17
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 18
+push local 3
+add
+push constant 4
+push constant 7
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 18
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 19
+push local 3
+add
+push constant 4
+push constant 11
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 19
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 20
+push local 3
+add
+push constant 5
+push constant 2
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 20
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 21
+push local 3
+add
+push constant 5
+push constant 9
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 21
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 22
+push local 3
+add
+push constant 5
+push constant 12
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 22
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 23
+push local 3
+add
+push constant 6
+push constant 4
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 23
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 24
+push local 3
+add
+push constant 6
+push constant 5
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 24
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 25
+push local 3
+add
+push constant 6
+push constant 6
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 25
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 26
+push local 3
+add
+push constant 6
+push constant 8
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 26
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 27
+push local 3
+add
+push constant 6
+push constant 11
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 27
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 28
+push local 3
+add
+push constant 7
+push constant 1
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 28
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 29
+push local 3
+add
+push constant 7
+push constant 3
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 29
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 30
+push local 3
+add
+push constant 7
+push constant 5
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 30
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 31
+push local 3
+add
+push constant 7
+push constant 6
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 31
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 32
+push local 3
+add
+push constant 7
+push constant 10
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 32
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 33
+push local 3
+add
+push constant 7
+push constant 11
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 33
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 34
+push local 3
+add
+push constant 8
+push constant 1
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 34
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 35
+push local 3
+add
+push constant 8
+push constant 3
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 35
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 36
+push local 3
+add
+push constant 8
+push constant 7
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 36
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 37
+push local 3
+add
+push constant 8
+push constant 12
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 37
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 38
+push local 3
+add
+push constant 9
+push constant 4
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 38
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 39
+push local 3
+add
+push constant 9
+push constant 5
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 39
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 40
+push local 3
+add
+push constant 9
+push constant 6
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 40
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 41
+push local 3
+add
+push constant 9
+push constant 9
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 41
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 42
+push local 3
+add
+push constant 9
+push constant 11
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 42
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 43
+push local 3
+add
+push constant 10
+push constant 2
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 43
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 44
+push local 3
+add
+push constant 10
+push constant 3
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 44
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 45
+push local 3
+add
+push constant 10
+push constant 5
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 45
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 46
+push local 3
+add
+push constant 10
+push constant 8
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 46
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 47
+push local 3
+add
+push constant 11
+push constant 3
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 47
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 48
+push local 3
+add
+push constant 11
+push constant 7
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 48
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 49
+push local 3
+add
+push constant 11
+push constant 9
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 49
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 50
+push local 3
+add
+push constant 11
+push constant 10
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 50
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 51
+push local 3
+add
+push constant 11
+push constant 11
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 51
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 52
+push local 3
+add
+push constant 12
+push constant 1
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 52
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 53
+push local 3
+add
+push constant 12
+push constant 3
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 53
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 54
+push local 3
+add
+push constant 12
+push constant 4
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 54
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 55
+push local 3
+add
+push constant 12
+push constant 5
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 55
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push constant 56
+push local 3
+add
+push constant 12
+push constant 9
+call Wall.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 56
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+not
+call Wall.draw 2
+pop temp 0
+push local 0
+push constant 0
+not
+call Player.draw 2
+pop temp 0
+push local 1
+push local 3
+push local 0
+call Movement.run 3
+pop temp 0
+push constant 0
+return

@@ -1,0 +1,98 @@
+function Player.new 0
+push constant 1
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+push argument 1
+call Posn.new 2
+pop this 0
+push pointer 0
+return
+function Player.draw 2
+push argument 0
+pop pointer 0
+push this 0
+call Posn.getX 1
+pop local 0
+push this 0
+call Posn.getY 1
+pop local 1
+push argument 1
+call Screen.setColor 1
+pop temp 0
+push local 0
+push static 0
+call Math.multiply 2
+push local 1
+push static 0
+call Math.multiply 2
+push local 0
+push static 0
+call Math.multiply 2
+push static 0
+add
+push local 1
+push static 0
+call Math.multiply 2
+push static 0
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Player.stop 0
+push argument 0
+pop pointer 0
+push constant 0
+return
+function Player.moveDown 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 0
+push constant 1
+call Posn.new 2
+call Posn.add 2
+pop temp 0
+push constant 0
+return
+function Player.moveUp 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 0
+push constant 1
+neg
+call Posn.new 2
+call Posn.add 2
+pop temp 0
+push constant 0
+return
+function Player.moveRight 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 1
+push constant 0
+call Posn.new 2
+call Posn.add 2
+pop temp 0
+push constant 0
+return
+function Player.moveLeft 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 1
+neg
+push constant 0
+call Posn.new 2
+call Posn.add 2
+pop temp 0
+push constant 0
+return
+function Player.setSize 0
+push argument 0
+pop static 0
+push constant 0
+return

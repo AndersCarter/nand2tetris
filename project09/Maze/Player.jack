@@ -1,0 +1,58 @@
+/** Player Box
+*/
+
+class Player {
+
+	//location on screen
+	field Posn loc;
+	
+	// The size of the square
+	static int size;
+	
+	// Constructs a new square with the given location and size
+	constructor Player new(int posnx, int posny) {
+		let loc = Posn.new(posnx, posny);
+		
+		return this;
+	}
+
+	//Draw : produces the black sqaure
+	method void draw(boolean color) {
+	    var int x, y;
+		let x = loc.getX();
+		let y = loc.getY();
+		do Screen.setColor(color);
+		do Screen.drawRectangle(x * size, y  * size, x * size + size, y  * size + size);
+		//do Screen.drawCircle(x * rad, y * rad, rad);
+		return;
+	}
+	
+	method void stop() {
+		return;
+	}
+	
+	method void moveDown() {
+		do loc.add(Posn.new(0, 1));
+		return;
+	}
+	
+	method void moveUp() {
+		do loc.add(Posn.new(0, -1));
+		return;
+	}
+	
+	method void moveRight() {
+		do loc.add(Posn.new(1, 0));
+		return;
+	}
+	
+	method void moveLeft() {
+		do loc.add(Posn.new(-1, 0));
+		return;
+	}
+	
+	function void setSize(int v) {
+	   let size = v;
+	   return;
+	}
+}

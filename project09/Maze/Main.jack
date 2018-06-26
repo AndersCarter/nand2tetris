@@ -1,0 +1,265 @@
+
+
+class Main {
+
+    function void main() {
+	
+		var Player p;
+		var Movement m;
+		var Wall w;
+		var Array a;
+		
+
+		do Player.setSize( 16 );
+		do Movement.setGameState ( false );
+		let p = Player.new(1, 2); //starting posn and movement
+		do Movement.setPlayer ( p );
+		let m = Movement.new();
+		do Wall.setSize( 16 );
+		let a = Array.new(1000);
+		
+		let a[0] = Wall.new(1, 1);
+		let w = a[0];
+		do w.draw(true);
+		
+		let a[1] = Wall.new(1, 3);
+		let w = a[1];
+		do w.draw(true);
+		
+		let a[2] = Wall.new(1, 5);
+		let w = a[2];
+		do w.draw(true);
+		
+		let a[3] = Wall.new(1, 7);
+		let w = a[3];
+		do w.draw(true);
+
+		let a[4] = Wall.new(1, 11);	
+		let w = a[4];
+		do w.draw(true);
+		
+		let a[5] = Wall.new(1, 12);
+		let w = a[5];
+		do w.draw(true);
+		
+		let a[6] = Wall.new(2, 1);
+		let w = a[6];
+		do w.draw(true);
+		
+		let a[7] = Wall.new(2, 3);
+		let w = a[7];
+		do w.draw(true);		
+		
+		let a[8] = Wall.new(2, 5);
+		let w = a[8];
+		do w.draw(true);		
+		
+		let a[9] = Wall.new(2, 9);
+		let w = a[9];
+		do w.draw(true);		
+		
+		let a[10] = Wall.new(3, 1);
+		let w = a[10];
+		do w.draw(true);		
+		
+		let a[11] = Wall.new(3, 5);
+		let w = a[11];
+		do w.draw(true);		
+		
+		let a[57] = Wall.new(3, 7);
+		let w = a[57];
+		do w.draw(true);		
+		
+		let a[12] = Wall.new(3, 8);
+		let w = a[12];
+		do w.draw(true);
+		
+		let a[13] = Wall.new(3, 9);
+		let w = a[13];
+		do w.draw(true);
+		
+		let a[14] = Wall.new(3, 11);
+		let w = a[14];
+		do w.draw(true);
+		
+		let a[15] = Wall.new(4, 3);
+		let w = a[15];
+		do w.draw(true);
+		
+		let a[16] = Wall.new(4, 4);
+		let w = a[16];
+		do w.draw(true);
+		
+		let a[17] = Wall.new(4, 5);
+		let w = a[17];
+		do w.draw(true);
+		
+		let a[18] = Wall.new(4, 7);
+		let w = a[18];
+		do w.draw(true);
+		
+		let a[19] = Wall.new(4, 11);
+		let w = a[19];
+		do w.draw(true);
+		
+		let a[20] = Wall.new(5, 2);
+		let w = a[20];
+		do w.draw(true);
+		
+		let a[21] = Wall.new(5, 9);
+		let w = a[21];
+		do w.draw(true);
+		
+		let a[22] = Wall.new(5, 12);
+		let w = a[22];
+		do w.draw(true);
+		
+		let a[23] = Wall.new(6, 4);
+		let w = a[23];
+		do w.draw(true);
+		
+		let a[24] = Wall.new(6, 5);
+		let w = a[24];
+		do w.draw(true);
+		
+		let a[25] = Wall.new(6, 6);
+		let w = a[25];
+		do w.draw(true);
+		
+		let a[26] = Wall.new(6, 8);
+		let w = a[26];
+		do w.draw(true);
+		
+		let a[27] = Wall.new(6, 11);
+		let w = a[27];
+		do w.draw(true);
+		
+		let a[28] = Wall.new(7, 1);
+		let w = a[28];
+		do w.draw(true);
+		
+		let a[29] = Wall.new(7, 3);
+		let w = a[29];
+		do w.draw(true);
+		
+		let a[30] = Wall.new(7, 5);
+		let w = a[30];
+		do w.draw(true);
+		
+		let a[31] = Wall.new(7, 6);
+		let w = a[31];
+		do w.draw(true);
+		
+		let a[32] = Wall.new(7, 10);
+		let w = a[32];
+		do w.draw(true);
+		
+		let a[33] = Wall.new(7, 11);
+		let w = a[33];
+		do w.draw(true);
+		
+		let a[34] = Wall.new(8, 1);
+		let w = a[34];
+		do w.draw(true);
+		
+		let a[35] = Wall.new(8, 3);
+		let w = a[35];
+		do w.draw(true);
+		
+		let a[36] = Wall.new(8, 7);
+		let w = a[36];
+		do w.draw(true);
+		
+		let a[37] = Wall.new(8, 12);
+		let w = a[37];
+		do w.draw(true);
+		
+		let a[38] = Wall.new(9, 4);
+		let w = a[38];
+		do w.draw(true);
+		
+		let a[39] = Wall.new(9, 5);
+		let w = a[39];
+		do w.draw(true);
+		
+		let a[40] = Wall.new(9, 6);
+		let w = a[40];
+		do w.draw(true);
+		
+		let a[41] = Wall.new(9, 9);
+		let w = a[41];
+		do w.draw(true);
+		
+		let a[42] = Wall.new(9, 11);
+		let w = a[42];
+		do w.draw(true);
+		
+		let a[43] = Wall.new(10, 2);
+		let w = a[43];
+		do w.draw(true);
+		
+		let a[44] = Wall.new(10, 3);
+		let w = a[44];
+		do w.draw(true);
+		
+		let a[45] = Wall.new(10, 5);
+		let w = a[45];
+		do w.draw(true);
+		
+		let a[46] = Wall.new(10, 8);
+		let w = a[46];
+		do w.draw(true);
+		
+		let a[47] = Wall.new(11, 3);
+		let w = a[47];
+		do w.draw(true);
+		
+		let a[48] = Wall.new(11, 7);
+		let w = a[48];
+		do w.draw(true);
+		
+		let a[49] = Wall.new(11, 9);
+		let w = a[49];
+		do w.draw(true);
+		
+		let a[50] = Wall.new(11, 10);
+		let w = a[50];
+		do w.draw(true);
+		
+		let a[51] = Wall.new(11, 11);
+		let w = a[51];
+		do w.draw(true);
+		
+		let a[52] = Wall.new(12, 1);
+		let w = a[52];
+		do w.draw(true);
+		
+		let a[53] = Wall.new(12, 3);
+		let w = a[53];
+		do w.draw(true);
+		
+		let a[54] = Wall.new(12, 4);
+		let w = a[54];
+		do w.draw(true);
+		
+		let a[55] = Wall.new(12, 5);
+		let w = a[55];
+		do w.draw(true);
+		
+		let a[56] = Wall.new(12, 9);
+		let w = a[56];
+		do w.draw(true);
+		
+		
+		do p.draw(true);
+		do m.run(a, p);
+		
+		
+		return;
+	}
+
+		
+}
+
+
+

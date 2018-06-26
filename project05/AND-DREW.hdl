@@ -1,0 +1,63 @@
+CHIP AND-DREW {
+
+    IN	in[3],
+		zr,
+		ng;  //the jump instructions
+
+    OUT out;
+
+    PARTS:
+	//this section is just a negation for each input
+	Not(in=in[0], out=n0);
+	Not(in=in[1], out=n1);
+	Not(in=in[2], out=n2);
+	Not(in=zr, out=nzr);
+	Not(in=ng, out=nng);
+	
+	
+	/**
+	  *the form of this hdl code is that the first two
+	  *And statements are the jump command bits, the third statement
+	  *takes the ALU output bits for that jump command and then the
+	  *last And puts everything together if needed.
+	  j1=2
+	  j2=1
+	  j3=0
+	*/
+	
+	And(a=n2, b=n1, out=zJGT);
+	And(a=zJGT, b=in[0], out=yJGT);
+	And(a=nzr, b=nng, out=ALUa);
+	And(a=ALUa, b=yJGT, out=JGT);
+	
+	And(a=n2, b=in[1], out=zJEQ);
+	And(a=zJEQ, b=n0, out=yJEQ);
+	And(a=zr, b=nng, out=ALUb);
+	And(a=ALUb, b=yJEQ, out=JEQ);
+	
+	And(a=n2, b=in[1], out=zJGE);
+	And(a=zJGE, b=in[0], out=yJGE);
+	Or(a=nng, b=zr, out=ALU1);
+	And(a=yJGE, b=ALU1, out=JGE);
+		
+	And(a=in[2], b=n1, out=zJLT);
+	And(a=zJLT, b=n0, out=yJLT);
+	And(a=ng, b=yJLT, out=JLT);
+	
+	And(a=in[2], b=n1, out=zJNE);
+	And(a=zJNE, b=in[0], out=yJNE);
+	And(a=yJNE, b=nzr, out=JNE);
+	
+	And(a=in[2], b=in[1], out=zJLE);
+	And(a=zJLE, b=n0, out=yJLE);
+	Or(a=ng, b=zr, out=ALU2);
+	And(a=ALU2, b=yJLE, out=JLE);
+	
+	And(a=in[2], b=in[1], out=zJMP);
+	And(a=zJMP, b=in[0], out=JMP);
+	
+	//This or statment produces true if any of the statements is true.
+	Or8Way( in[1]=JGT, in[2]=JEQ, in[3]=JGE, 
+		   in[4]=JLT,in[5]=JNE, in[6]=JLE, in[7]=JMP, out=out);
+
+}

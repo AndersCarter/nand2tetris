@@ -1,0 +1,106 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/12/Keyboard.jack
+
+/**
+ * A library for handling user input from the keyboard.
+ */
+class Keyboard {
+
+    /** Initializes the keyboard. */
+    function void init() {
+		return;
+    } 
+
+    /**
+     * Returns the ASCII code (as char) of the currently pressed key,
+     * or 0 if no key is currently pressed.
+     * Recognizes all ASCII characters, as well as the following extension
+     * of action keys:
+     * New line = 128 = String.newline()
+     * Backspace = 129 = String.backspace()
+     * Left Arrow = 130
+     * Up Arrow = 131
+     * Right Arrow = 132
+     * Down Arrow = 133
+     * Home = 134
+     * End = 135
+     * Page Up = 136
+     * Page Down = 137
+     * Insert = 138
+     * Delete = 139
+     * ESC = 140
+     * F1 - F12 = 141 - 152
+     */
+    function char keyPressed() {
+		var int result;
+		let result = Memory.peek(24576);
+		return(result);
+    }
+
+    /**								
+     * Reads the next character from the keyboard.
+     * waits until a key is pressed and then released, then echoes
+     * the key to the screen, and returns the value of the pressed key.
+     */
+    function char readChar() {
+		var char key;
+		var char c;
+		let key = Keyboard.keyPressed();
+		while (key = 0) {
+			let key = Keyboard.keyPressed();
+		}
+		let c = key;
+		do Output.printChar(c);
+		return(c);
+    }
+
+    /**								
+     * Prints the message on the screen, reads the next line
+     * (until a newline character) from the keyboard, and returns its value.
+     */
+    function String readLine(String message) {
+		var char c;
+		var String hold;
+		let hold = String.new( message.length() );
+		while (1 > 0) {
+			let c = Keyboard.readChar();
+			if (c = 128) {
+				do Output.println();
+				return(hold);
+			} if (c = 129) {
+				let hold = hold.eraseLastChar();
+				do Output.backSpace();
+				do Sys.wait(250);
+			} else {
+				let hold = hold.appendChar(c);
+				do Sys.wait(250);
+			}
+		} 
+		return(hold);
+    }   
+
+    /**								
+     * Prints the message on the screen, reads the next line
+     * (until a newline character) from the keyboard, and returns its
+     * integer value (until the first non numeric character).
+     */
+    function int readInt(String message) {
+		var String hold;
+		var int c;
+		let hold = String.new(message.length());
+		let c = Keyboard.readChar();
+		while ( ~(c = 10)) {
+			if (c = 8) {
+				do String.eraseLastChar();
+				do Output.backspace();
+			} else {
+				let hold = hold.appendChar(c);
+			}
+		}
+		do Output.printString(hold);
+		do Output.println();
+		return(hold.intValue());
+    }
+}

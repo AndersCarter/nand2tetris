@@ -1,0 +1,172 @@
+Function name #local variables
+
+
+
+call f n
+
+Push SP
+	
+@SP
+D=M
+A=M-1
+M=D
+@SP
+M=M+1
+
+Push LCL
+@LCL
+D=M
+@SP
+A=M-1
+M=D
+@SP
+M=M+1
+
+Push ARG
+@ARG
+D=M
+@SP
+A=M-1
+M=D
+@SP
+M=M+1
+
+Push THIS
+@THIS
+D=M
+@SP
+A=M-1
+M=D
+@SP
+M=M+1
+
+Push THAT
+@THAT
+D=M
+@SP
+A=M-1
+M=D
+@SP
+M=M+1
+
+ARG
+@~a (n)
+D=A
+@SP
+D=M-D
+@5
+D=D-A
+@ARG
+M=D
+
+LCL
+@SP
+D=M
+@LCL
+M=D
+@~a (lcl from function)
+D=A
+@SP
+M=M+D
+
+
+goto f
+@~a (label of the function)
+0;JMP
+
+(Return Label)
+
+
+
+function f k
+f (FUNCTION-NAME)
+repeat k
+
+@~a (k) //go to k
+D=A-1 //k-1
+(START)
+@LCL //lcl
+A=M+D //goto lcl+(k-1)
+M=0
+A=D-1
+@START
+D;JNE
+
+
+Return
+
+FRAME
+@LCL
+D=M
+@FRAME =(13)
+M=D
+
+
+RET
+@5
+D=A
+@FRAME
+D=M-D
+@RET =(14)
+M=D
+
+RET-RESULT
+@5
+D=A
+@FRAME
+A=M-D
+D=M
+@HOLD =(15)
+M=D
+@SP
+A=A-1
+D=M
+@HOLD
+A=M
+M=D
+
+RET-THAT
+@1
+D=A
+@FRAME
+A=M-D
+D=M
+@THAT
+M=D
+
+RET-THIS
+@2
+D=A
+@FRAME
+A=M-D
+D=M
+@THAT
+M=D
+
+RET-ARG
+@3
+D=A
+@FRAME
+A=M-D
+D=M
+@ARG
+M=D
+
+RET-LCL
+@4
+D=A
+@FRAME
+A=M-D
+D=M
+@LCL
+M=D
+
+goto RET
+@(return address)
+0;JMP
+
+
+
+
+
+

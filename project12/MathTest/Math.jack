@@ -1,0 +1,108 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/12/Math.jack
+
+/**
+ * A basic math library.
+ */
+class Math {
+
+	static Array twoPowers;
+
+    /** Initializes the library. */
+    function void init() {
+		var int i;
+		var int p;
+		let i = 0;
+		let p = 1;
+		let twoPowers = Array.new(16);
+		while (i < 16) {
+			let twoPowers[i] = p;
+			let p = p + p;
+			let i = i + 1;
+		}
+		return;
+	}
+
+    /** Returns the absolute value of x. */
+    function int abs(int x) {
+		if( x < 0 ) {
+			let x = -x;
+			return(x);
+		} else {
+			return(x);
+		}
+    }
+
+    /** Returns the product of x and y. */ //consider negative numbers?
+    function int multiply(int x, int y) {
+		var int sum;
+		var int shifted;
+		var int i;
+		let i = 0;
+		let sum = 0;
+		let shifted = x;
+		while (i < 16) {
+			if( Math.bit(y, i) ) {
+				let sum = sum + shifted;
+			} 
+			let shifted = shifted + shifted;
+			let i = i + 1;
+		}
+		return(sum);
+    }
+	
+	/** Returns true if the i'th bit of x is 1 */
+	function boolean bit(int x, int i) {
+		if (x & twoPowers[i] = 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+    /** Returns the integer part of x/y. */ 
+    function int divide(int x, int y) {
+	var int i;
+	var int n;
+	if( x < 0 ) {
+		let n = 1;
+	} 
+	let x = Math.abs(x);
+	let y = Math.abs(y);
+		while(~(y > x)){
+			let x = x - y;
+			let i = i + 1;
+		}
+	if (n = 0) {
+		return(i);
+	} else {
+		return(-i);
+	}
+	
+}
+
+    /** Returns the integer part of the square root of x. */
+    function int sqrt(int x) {
+	return 0;
+    }
+
+    /** Returns the greater number. */
+    function int max(int a, int b) {
+		if ( a > b ) {
+			return(a);
+		} else {
+			return(b);
+		}
+    }
+
+    /** Returns the smaller number. */
+    function int min(int a, int b) {
+		if ( a < b ) {
+			return(a);
+		} else {
+			return(b);
+		}
+    }
+}

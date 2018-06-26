@@ -1,0 +1,35 @@
+/** Walls to maze
+*/
+
+class Wall {
+
+	//location on screen
+	field Posn loc;
+	
+	// The size of the square
+	static int size;
+	
+	// Constructs a new square with the given location and size
+	constructor Wall new(int posnx, int posny) {
+		let loc = Posn.new(posnx, posny);
+		
+		return this;
+	}
+
+	//Draw : produces the black sqaure (wall)
+	method void draw(boolean color) {
+	    var int x, y;
+		let x = loc.getX();
+		let y = loc.getY();
+		do Screen.setColor(color);
+		do Screen.drawRectangle(x * size, y * size, x * size + size, y * size + size);
+		return;
+	}
+	
+	function void setSize(int v) {
+	   let size = v;
+	   return;
+	}
+
+	
+}

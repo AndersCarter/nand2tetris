@@ -1,0 +1,166 @@
+/** Controls and movement
+*/
+
+class Movement {
+	static Posn posn;
+	
+	static Player player;
+
+	static boolean gameEnd;
+	
+	field int direction; 
+	
+	
+	constructor Movement new() {
+		let player = player;
+		let direction = 0;
+		
+		return this;
+	}
+	
+	
+	method void run(array a, player p) {
+		var char key;
+		let a = a;
+		while(~gameEnd) {
+		let key = Keyboard.keyPressed();
+			
+			if (key = 0) {
+				let direction = 0;
+				do movePlayer();
+				do collision(a, p);
+			}
+			if (key = 131) {
+                let direction = 1;
+				do movePlayer();
+				do collision(a, p);
+            }
+            if (key = 133) {
+                let direction = 2;
+				do movePlayer();
+				do collision(a, p);
+            }
+            if (key = 130) {
+                let direction = 3;
+				do movePlayer();
+				do collision(a, p);
+            }
+            if (key = 132) {
+                let direction = 4;
+				do movePlayer();
+				do collision(a, p);
+			} 
+		}
+		return;	
+	}
+	
+	method void collision(array a, player p) {
+		if ((posn.sameposn(p, a[57])) |
+			(posn.sameposn(p, a[56])) |
+			(posn.sameposn(p, a[55])) |
+			(posn.sameposn(p, a[54])) |
+			(posn.sameposn(p, a[53])) |
+			(posn.sameposn(p, a[52])) |
+			(posn.sameposn(p, a[51])) |
+			(posn.sameposn(p, a[50])) |
+			(posn.sameposn(p, a[49])) |
+			(posn.sameposn(p, a[48])) |
+			(posn.sameposn(p, a[47])) |
+			(posn.sameposn(p, a[46])) |
+			(posn.sameposn(p, a[45])) |
+			(posn.sameposn(p, a[44])) |
+			(posn.sameposn(p, a[43])) |
+			(posn.sameposn(p, a[42])) |
+			(posn.sameposn(p, a[41])) |
+			(posn.sameposn(p, a[40])) |
+			(posn.sameposn(p, a[39])) |
+			(posn.sameposn(p, a[38])) |
+			(posn.sameposn(p, a[37])) |
+			(posn.sameposn(p, a[36])) |
+			(posn.sameposn(p, a[35])) |
+			(posn.sameposn(p, a[34])) |
+			(posn.sameposn(p, a[33])) |
+			(posn.sameposn(p, a[32])) |
+			(posn.sameposn(p, a[31])) |
+			(posn.sameposn(p, a[30])) |
+			(posn.sameposn(p, a[29])) |
+			(posn.sameposn(p, a[28])) |
+			(posn.sameposn(p, a[27])) |
+			(posn.sameposn(p, a[26])) |
+			(posn.sameposn(p, a[25])) |
+			(posn.sameposn(p, a[24])) |
+			(posn.sameposn(p, a[23])) |
+			(posn.sameposn(p, a[22])) |
+			(posn.sameposn(p, a[21])) |
+			(posn.sameposn(p, a[20])) |
+			(posn.sameposn(p, a[19])) |
+			(posn.sameposn(p, a[18])) |
+			(posn.sameposn(p, a[17])) |
+			(posn.sameposn(p, a[16])) |
+			(posn.sameposn(p, a[15])) |
+			(posn.sameposn(p, a[14])) |
+			(posn.sameposn(p, a[13])) |
+			(posn.sameposn(p, a[12])) |
+			(posn.sameposn(p, a[11])) |
+			(posn.sameposn(p, a[10])) |
+			(posn.sameposn(p, a[9])) |
+			(posn.sameposn(p, a[8])) |
+			(posn.sameposn(p, a[7])) |
+			(posn.sameposn(p, a[6])) |
+			(posn.sameposn(p, a[5])) |
+			(posn.sameposn(p, a[4])) |
+			(posn.sameposn(p, a[3])) |
+			(posn.sameposn(p, a[2])) |
+			(posn.sameposn(p, a[1])) |
+			(posn.sameposn(p, a[0]))) {
+			let gameEnd = true;
+		} else {
+			let gameEnd = false;
+		}
+		return;
+	}
+	
+	method void movePlayer() {
+		if (direction = 0) {
+			do player.draw(false);
+			do player.stop();
+			do player.draw(true);
+		}
+		if (direction = 1) {
+			do player.draw(false);
+			do player.moveUp();
+			do player.draw(true);
+		}
+		if (direction = 2) {
+			do player.draw(false);
+			do player.moveDown();
+			do player.draw(true);
+		}
+		if (direction = 3) {
+			do player.draw(false);
+			do player.moveLeft();
+			do player.draw (true);
+		}
+		if (direction = 4) {
+			do player.draw(false);
+			do player.moveRight();
+			do player.draw(true);
+		}
+		
+		do Sys.wait(150);
+		return;	
+	}
+	
+	function void setPlayer(player p) {
+		let player = p;
+		return;
+	}
+	
+	function void setGameState(boolean state){
+		let gameEnd = state;
+		return;
+	}
+		
+	
+	
+}

@@ -1,0 +1,52 @@
+
+
+class Posn {
+
+
+	field int x;
+	field int y;
+	field Posn a;
+	field Posn b;
+	
+	constructor Posn new(int newx, int newy) {
+		let x = newx;
+		let y = newy;
+		return this;
+	}
+	
+	method void add(Posn other) {
+		let x = x + other.getX();
+		let y = y + other.getY();
+		return;
+	}
+	
+	method int getX() {
+	   return x;
+	}
+
+	method int getY() {
+		return y;
+	}
+	
+	method boolean sameposn(Posn a, Posn b) {
+		var boolean result;
+		var boolean result1;
+		var boolean result2;
+		var int ax;
+		var int ay;
+		var int bx;
+		var int by;
+		let ax = a.getX();
+		let ay = a.getY();
+		let bx = b.getX();
+		let by = b.getY();
+		let result1 = (ax = bx);
+		let result2 = (ay = by);
+		if ( result1 & result2 ) {
+			let result = true;
+			} else {
+			let result = false;
+			}
+	 return(result);
+	}
+}

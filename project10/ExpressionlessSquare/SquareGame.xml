@@ -1,0 +1,25 @@
+<class>
+<keyword> class </keyword>
+<identifier> SquareGame </identifier>
+<symbol> { </symbol>
+<classVarDec>
+<keyword> field </keyword>
+<identifier> Square </identifier>
+<identifier> square </identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<subroutineDec>
+<keyword> field </keyword>
+<keyword> int </keyword>
+<identifier> direction </identifier>
+<symbol> ; </symbol>
+<parameterList>
+<keyword> constructor </keyword>
+<identifier> SquareGame </identifier>
+</parameterList>
+<identifier> new </identifier>
+<subroutineBody>
+<symbol> ( </symbol>
+<statement>
+<symbol> ) </symbol>
+</statement>
